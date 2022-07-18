@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: staging
+    database: dtc-de-course-351511
+    schema: dbt_dwh_stg
+    tables:
+        - name: dwh_days
+
+models:
+  - name: stg_commits
+    description: >
+      GitHub commits
