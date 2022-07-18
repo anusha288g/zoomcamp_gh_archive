@@ -1,0 +1,29 @@
+[2022-07-16 07:27:38,093] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gh_data_ingestion.remove_files_task scheduled__2022-07-14T05:30:00+00:00 [queued]>
+[2022-07-16 07:27:38,150] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gh_data_ingestion.remove_files_task scheduled__2022-07-14T05:30:00+00:00 [queued]>
+[2022-07-16 07:27:38,154] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-16 07:27:38,157] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-07-16 07:27:38,159] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-16 07:27:38,222] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): remove_files_task> on 2022-07-14 05:30:00+00:00
+[2022-07-16 07:27:38,252] {standard_task_runner.py:52} INFO - Started process 931 to run task
+[2022-07-16 07:27:38,278] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gh_data_ingestion', 'remove_files_task', 'scheduled__2022-07-14T05:30:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gh.py', '--cfg-path', '/tmp/tmpffvsxp0g', '--error-file', '/tmp/tmpu7l7tnip']
+[2022-07-16 07:27:38,291] {standard_task_runner.py:77} INFO - Job 39: Subtask remove_files_task
+[2022-07-16 07:27:39,073] {logging_mixin.py:109} INFO - Running <TaskInstance: gh_data_ingestion.remove_files_task scheduled__2022-07-14T05:30:00+00:00 [running]> on host 4972e04a2617
+[2022-07-16 07:27:39,440] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-07-16 07:27:39,525] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gh_data_ingestion
+AIRFLOW_CTX_TASK_ID=remove_files_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-14T05:30:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-14T05:30:00+00:00
+[2022-07-16 07:27:39,529] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-07-16 07:27:39,538] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'rm /opt/***/2022-07-14-5.json.gz /opt/***/2022-07-14-5.parquet']
+[2022-07-16 07:27:39,648] {subprocess.py:85} INFO - Output:
+[2022-07-16 07:27:41,054] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-07-16 07:27:41,341] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gh_data_ingestion, task_id=remove_files_task, execution_date=20220714T053000, start_date=20220716T072738, end_date=20220716T072741
+[2022-07-16 07:27:41,566] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-07-16 07:27:41,996] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
