@@ -1,0 +1,5 @@
+/dbt
+*.pyc
+*.log
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup

@@ -198,8 +198,8 @@ def upload_to_gcs(bucket, object_name, local_file):
 
 with DAG(
     dag_id="gh_data_ingestion",
-    schedule_interval="30 * * * *",
-    start_date=datetime(2022, 7, 14),
+    schedule_interval="10 * * * *",
+    start_date=datetime(2022, 7, 15),
     default_args=default_args,
     catchup=True,
     max_active_runs=3,
